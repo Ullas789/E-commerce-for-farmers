@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Participant Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://t3.ftcdn.net/jpg/03/70/92/84/360_F_370928450_R6g8c0j5cey86PUXE32W7KMiqIUe1fOI.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 90%;
+        }
+        
+        h2 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Lato', Arial, sans-serif;
+        }
+        
+        form {
+            margin-top: 1.5rem;
+        }
+        
+        label {
+            font-weight: 700;
+        }
+        
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        input[type="datetime-local"] {
+            margin-top: 0.5rem;
+        }
+        
+        input[type="submit"] {
+            display: block;
+            margin: 1.5rem auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>BASIC DETAILS</h2>
+
+        <form>
+            <label for="ename">Event Name</label><br>
+            <input type="text" id="event5" name="event" value=""><br>
+
+            <label for="subject">Description</label>
+            <textarea id="subject" name="subject" placeholder="About the event..." style="height:200px"></textarea>
+        </form>
+
+        <form name="form1" id="form1" action="/action_page.php">
+            <label for="topic">Topics:</label>
+            <select name="topic" id="topic">
+                <option value="camp">Camp</option>
+                <option value="conference">Conference</option>
+                <option value="festival">Festival</option>
+                <option value="trip">Trip</option>
+                <option value="tournament">Tournament</option>
+                <option value="competition">Competition</option>
+                <option value="others">Others</option>
+            </select>
+            <input type="text" id="event5" name="event" placeholder="Please specify if Others" value=""><br>
+
+            <label>Type:</label>
+            <br>
+            <input type="radio" id="online" name="type" value="online">
+            <label for="online">ONLINE</label><br>
+            <input type="datetime-local" name="datetime" id="datatime"><br>
+            <input type="radio" id="offline" name="type" value="offline">
+            <label for="offline">OFFLINE</label><br>
+
+            <label for="loc">Event Location:</label>
+            <textarea id="loc" name="location" placeholder="About the event location" style="height:100px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        alert("success");
+    </script>
+</body>
+
+</html>
